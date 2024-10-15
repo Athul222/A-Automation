@@ -1,0 +1,24 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% include "header.html" %}
+
+    {% include "moreitem.html" %}
+
+    <!-- Main content -->
+    <main class="main-grid">
+        
+        {% include "leftcontent.html" %}
+
+        <div class="main-right-part">
+            <h2>Fill the Following Form to Proceed</h2>
+            {{ render_form(form, novalidate=True) }}
+            {% if data %}
+                <div class="mb-3">
+                    <a href="{{url_for('scrape_result')}}">
+                        <button class="btn btn-success">view scraped data</button>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+{% include "footer.html" %}

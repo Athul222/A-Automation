@@ -1,0 +1,30 @@
+<div class="grid-container">
+
+    {% include "header.html" %}
+
+    <!-- float-img  -->
+    <div class="img-container fade-out">
+        <img src="{{url_for('static', filename='assets/img1.png')}}" alt="" class="robo-img">
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-content-container">
+        <div class="content">
+            <h2 class="hero-heading">Let's <br />
+                <span>Automate</span>
+            </h2>
+            <p class="hero-quote">
+                Automation is the alchemist of our age, transforming mundane
+                 tasks into golden opportunities for human ingenuity.
+            </p>
+            <a href="{{url_for('documentation')}}">
+                <button class="start-btn">
+                    Let's Go
+                </button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% include "footer.html" %}
