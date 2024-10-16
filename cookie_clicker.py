@@ -7,6 +7,7 @@ COOKIE_URL = "https://orteil.dashnet.org/experiments/cookie/"
 class CookieClicker:
     def __init__(self, minute: int):
         chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--headless")
         chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         self.driver = webdriver.Chrome(chrome_options)
         self.minute = minute
